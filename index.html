@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.cdnfonts.com/css/georgia" rel="stylesheet" />
+    <link
+      href="https://fonts.cdnfonts.com/css/sf-pro-display"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "SF Pro Display", sans-serif;
+        font-size: 45px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+
+      #karakoc-logo {
+        margin: 0;
+        padding: 0;
+        font-family: "Georgia", sans-serif;
+      }
+
+      .google-letter {
+        display: inline;
+      }
+
+      a {
+        color: blue;
+        text-decoration: underline;
+      }
+
+      a:hover {
+        color: darkblue;
+      }
+
+      @media (max-width: 600) {
+        body {
+          font-size: 30px;
+        }
+      }
+
+      @media (max-width: 340px) {
+        body {
+          font-size: 20px; /* Reduce font-size by 10px from default 45px */
+        }
+      }
+
+      .language-selector {
+        margin-top: 20px;
+        font-size: 20px;
+      }
+
+      .language-selector a {
+        color: lightgray;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+    </style>
+    <title>Emirhan Karakoc Website</title>
+  </head>
+  <body>
+    <div id="youtube">
+      <a href="https://www.youtube.com/@emirwildrift">youtube</a>
+    </div>
+    <div id="cv">
+      <a
+        href="https://github.com/emirhankarakoc/website-emirhankarakoc.com/raw/main/emirhan-karakoc.pdf"
+        download="emirhan-karakoc.pdf"
+      >
+        download cv
+      </a>
+    </div>
+    <div id="github1">
+      <a href="https://github.com/emirhankarakoc">github</a>
+    </div>
+    <div id="mail">
+      <a href="#" onclick="showEmail(); return false;">mail</a>
+    </div>
+    <div id="projects">
+      <a href="#" style="text-decoration: none; color: white">my projects</a>
+    </div>
+    <div style="display: flex; flex-direction: row">
+      <div id="projectsinyoutube">
+        <a
+          href="https://youtube.com/playlist?list=PL9ijKSNIEZlHrfgPVZc7eHkK2j9OpBncT&si=bbRpxTdoB1AMIbsA"
+          style="color: yellow; text-decoration: underline"
+        >
+          in youtube
+        </a>
+      </div>
+      <span>&nbsp;&nbsp;&nbsp;</span>
+      <div id="projectsingithub">
+        <a
+          href="https://github.com/emirhankarakoc?tab=repositories"
+          style="color: lightgreen; text-decoration: underline"
+        >
+          in github
+        </a>
+      </div>
+    </div>
+
+    <div id="karakoc-logo" style="font-family: 'Georgia', sans-serif">
+      <span class="google-letter" style="color: #4285f4">e</span>
+      <span class="google-letter" style="color: #ea4335">m</span>
+      <span class="google-letter" style="color: #fbbc05">i</span>
+      <span class="google-letter" style="color: #4285f4">r</span>
+      <span class="google-letter" style="color: #34a853">h</span>
+      <span class="google-letter" style="color: #ea4335">a</span>
+      <span class="google-letter" style="color: #fbbc05">n</span>
+
+      <span class="google-letter" style="color: #4285f4">&nbsp;</span>
+
+      <span class="google-letter" style="color: #ea4335">k</span>
+      <span class="google-letter" style="color: #fbbc05">a</span>
+      <span class="google-letter" style="color: #34a853">r</span>
+      <span class="google-letter" style="color: #4285f4">a</span>
+      <span class="google-letter" style="color: #ea4335">k</span>
+      <span class="google-letter" style="color: #fbbc05">o</span>
+      <span class="google-letter" style="color: #34a853">c</span>
+    </div>
+    <br />
+    <span class="google-letter" style="color: #4285f4">2</span>
+    <span class="google-letter" style="color: #ea4335">0</span>
+    <span class="google-letter" style="color: #fbbc05">2</span>
+    <span class="google-letter" style="color: #4285f4">4</span>
+    <span class="google-letter" style="color: #ea4335">&nbsp;</span>
+    <span class="google-letter" style="color: #fbbc05">b</span>
+    <span class="google-letter" style="color: #34a853">a</span>
+    <span class="google-letter" style="color: #4285f4">k</span>
+    <span class="google-letter" style="color: #ea4335">u</span>
+
+    <div class="language-selector">
+      <a href="#" onclick="changeLanguage('en'); return false;">EN</a>
+      <a href="#" onclick="changeLanguage('tr'); return false;">TR</a>
+    </div>
+
+    <script>
+      function showEmail() {
+        alert("emirhankarakoc@yahoo.com");
+      }
+
+      function changeLanguage(lang) {
+        const elements = {
+          youtube: lang === "en" ? "youtube" : "youtube",
+          cv: lang === "en" ? "download cv" : "cv'mi indir",
+          github1: lang === "en" ? "github" : "github",
+          mail: lang === "en" ? "mail" : "mail",
+          projects: lang === "en" ? "my projects" : "projelerim",
+          projectsinyoutube: lang === "en" ? "in youtube" : "youtubedakiler",
+          projectsingithub: lang === "en" ? "in github" : "githubdakiler",
+        };
+
+        for (let id in elements) {
+          const element = document.getElementById(id);
+          if (element) {
+            const link = element.querySelector("a");
+            if (link) {
+              link.innerText = elements[id];
+            } else {
+              element.innerText = elements[id];
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
