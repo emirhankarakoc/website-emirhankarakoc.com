@@ -40,15 +40,15 @@
         color: darkblue;
       }
 
-      @media (max-width: 600) {
+      @media (max-width: 600px) {
         body {
           font-size: 30px;
         }
       }
 
-      @media (max-width: 340px) {
+      @media (max-width: 515px) {
         body {
-          font-size: 20px; /* Reduce font-size by 10px from default 45px */
+          font-size: 25px; /* Reduce font-size by 10px from default 45px */
         }
       }
 
@@ -67,7 +67,9 @@
   </head>
   <body>
     <div id="youtube">
-      <a href="https://www.youtube.com/@emirwildrift">youtube</a>
+      <a style="color: red" href="https://www.youtube.com/@emirwildrift"
+        >youtube</a
+      >
     </div>
     <div id="cv">
       <a
@@ -78,10 +80,12 @@
       </a>
     </div>
     <div id="github1">
-      <a href="https://github.com/emirhankarakoc">github</a>
+      <a style="color: gray" href="https://github.com/emirhankarakoc">github</a>
     </div>
     <div id="mail">
-      <a href="#" onclick="showEmail(); return false;">mail</a>
+      <a href="#" style="color: burlywood" onclick="showEmail(); return false;"
+        >mail</a
+      >
     </div>
     <div id="projects">
       <a href="#" style="text-decoration: none; color: white">my projects</a>
@@ -106,6 +110,51 @@
       </div>
     </div>
 
+    <div id="shortcuts">
+      <a href="#" style="text-decoration: none; color: white">shortcuts</a>
+    </div>
+
+    <div style="display: flex; flex-direction: row; justify-content: center">
+      <div id="betting">
+        <a
+          href="https://github.com/emirhankarakoc/project-betting"
+          style="color: #ea4335"
+          >bet</a
+        >
+      </div>
+      <span>&nbsp;&nbsp;&nbsp;</span>
+      <div id="auction">
+        <a
+          href="https://github.com/emirhankarakoc/project-live-auction"
+          style="color: aquamarine"
+          >live auction</a
+        >
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: row; justify-content: center">
+      <div id="trojan">
+        <a
+          href="https://github.com/emirhankarakoc/ratto5"
+          style="color: #fbbc05"
+          >trojan</a
+        >
+      </div>
+      <span>&nbsp;&nbsp;&nbsp;</span>
+      <div id="sofra">
+        <a
+          href="https://github.com/emirhankarakoc/project-sofra"
+          style="color: #4285f4"
+          >sofra</a
+        >
+      </div>
+    </div>
+    <div id="findmechanicsarouneme">
+      <a
+        href="https://github.com/emirhankarakoc/project-ustam"
+        style="color: greenyellow"
+        >find mechanics around me</a
+      >
+    </div>
     <div id="karakoc-logo" style="font-family: 'Georgia', sans-serif">
       <span class="google-letter" style="color: #4285f4">e</span>
       <span class="google-letter" style="color: #ea4335">m</span>
@@ -126,21 +175,22 @@
       <span class="google-letter" style="color: #34a853">c</span>
     </div>
     <br />
-    <span class="google-letter" style="color: #4285f4">2</span>
-    <span class="google-letter" style="color: #ea4335">0</span>
-    <span class="google-letter" style="color: #fbbc05">2</span>
-    <span class="google-letter" style="color: #4285f4">4</span>
-    <span class="google-letter" style="color: #ea4335">&nbsp;</span>
-    <span class="google-letter" style="color: #fbbc05">b</span>
-    <span class="google-letter" style="color: #34a853">a</span>
-    <span class="google-letter" style="color: #4285f4">k</span>
-    <span class="google-letter" style="color: #ea4335">u</span>
+    <span class="google-letter" style="font-size: 29px; color: #4285f4">2</span>
+    <span class="google-letter" style="font-size: 29px; color: #ea4335">0</span>
+    <span class="google-letter" style="font-size: 29px; color: #fbbc05">2</span>
+    <span class="google-letter" style="font-size: 29px; color: #4285f4">4</span>
+    <span class="google-letter" style="font-size: 29px; color: #ea4335"
+      >&nbsp;</span
+    >
+    <span class="google-letter" style="font-size: 29px; color: #fbbc05">b</span>
+    <span class="google-letter" style="font-size: 29px; color: #34a853">a</span>
+    <span class="google-letter" style="font-size: 29px; color: #4285f4">k</span>
+    <span class="google-letter" style="font-size: 29px; color: #ea4335">u</span>
 
     <div class="language-selector">
       <a href="#" onclick="changeLanguage('en'); return false;">EN</a>
       <a href="#" onclick="changeLanguage('tr'); return false;">TR</a>
     </div>
-
     <script>
       function showEmail() {
         alert("emirhankarakoc@yahoo.com");
@@ -155,6 +205,7 @@
           projects: lang === "en" ? "my projects" : "projelerim",
           projectsinyoutube: lang === "en" ? "in youtube" : "youtubedakiler",
           projectsingithub: lang === "en" ? "in github" : "githubdakiler",
+          shortcuts: lang === "en" ? "shortcuts" : "kisayollar",
         };
 
         for (let id in elements) {
